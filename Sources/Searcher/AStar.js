@@ -1,10 +1,11 @@
 import Heap from "./Heap.js";
 
 class AStar {
-  constructor(generateNeighbours, uniqueID, edgeCost) {
+  constructor(generateNeighbours, uniqueID, edgeCost, edgeHeuristics) {
     this.generateNeighbours = generateNeighbours;
     this.uniqueID = uniqueID;
     this.edgeCost = edgeCost;
+    this.edgeHeuristics = edgeHeuristics;
     this.heap = new Heap((a, b) => {
       return a.cost < b.cost;
     });
@@ -50,7 +51,7 @@ class AStar {
         const neighbourID = this.uniqueID(neighbours[i]);
 
         if(!(neighbourID in visited)) {
-          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost;
+          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost + this.edgeHeuristics(currentNode.node, dst);
           if((neighbourID in costPerID) && costPerID[neighbourID] < currentCost) {
             continue;
           }

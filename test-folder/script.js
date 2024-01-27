@@ -2,19 +2,14 @@ const { Point, Polygon, Search } = require('polygon-pathfinding');
 
 let polygon = new Polygon();
 
-polygon.push(0, 0); // y, x
-polygon.push(0, 5);
-polygon.push(5, 5);
+polygon.push(0, 0);
 polygon.push(5, 0);
-polygon.closePolygon(); // Creates a line to the first point in order to close it.
+polygon.push(5, 5);
+polygon.push(2, 5);
+polygon.push(2, 3);
+polygon.push(0, 3);
+polygon.closePolygon();
 
-polygon.triangulate(); // This will triangulate the polygon (effectivelly creating a navmesh).
+polygon.triangulate();
 let searcher = new Search(polygon);
-let pointsPath = searcher.getPointsPath(new Point(1, 1), new Point(3, 2));
-if(!pointsPath) {
-  console.log("EMPTY")
-}
-
-for(let i = 0, c = pointsPath.length; i < c; i++) {
-  console.log(`Point (${pointsPath[i].y}, ${pointsPath[i].x})`);
-}
+console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))

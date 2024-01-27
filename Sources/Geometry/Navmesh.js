@@ -52,9 +52,6 @@ class Navmesh {
   getTriangle(point) {
     const triangles = this.triangles;
     for(let i = 0, c = triangles.length; i < c; i++) {
-      // this.triangles[i].displayEdges();
-      // console.log(triangles[i].isPointInside(point), point)
-
       if(triangles[i].isPointInside(point)) {
         return triangles[i];
       }

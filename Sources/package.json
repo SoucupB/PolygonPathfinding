@@ -5,8 +5,7 @@
   "main": "dist/bundle.js",
   "scripts": {
     "test": "npx tap",
-    "build": "webpack --mode development",
-    "start": "webpack serve --mode development"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",

@@ -58,7 +58,6 @@ class Search {
     return this.searchFunnelPoints_t(funnel, bisectors, new Line(new Point(-5, -5), new Point(src.y, src.x)), new Line(new Point(-5, -5), new Point(dst.y, dst.x)));
   }
 
-  // to modify this
   getPointsPathFromTriangle(srcTriangle, dstTriangle, src, dst) {
     let triangles = this.search(srcTriangle, dstTriangle);
     let funnel = Funnel.construct(triangles);
@@ -84,7 +83,7 @@ class Search {
       return null;
     }
 
-    return [src, ...this.getPointsPathFromTriangle(triangleSrc, triangleDst, src, dst), dst]
+    return this.getPointsPathFromTriangle(triangleSrc, triangleDst, src, dst);
   }
 }
 

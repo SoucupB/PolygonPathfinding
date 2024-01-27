@@ -4,7 +4,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: './index.js', // Entry point of your application
   output: {
-    filename: 'indexSrc.js', // Output bundle file name
+    filename: 'dst/bundle.js', // Output bundle file name
     path: path.resolve(__dirname, ''), // Output directory
     libraryTarget: 'commonjs2',
   },

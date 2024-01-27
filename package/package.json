@@ -2,7 +2,7 @@
   "name": "polygon-pathfinding",
   "version": "1.0.0",
   "description": "A pathfinding algorithm for 2d polygons",
-  "main": "indexSrc.js",
+  "main": "bundle.js",
   "scripts": {
     "test": "npx tap",
     "build": "webpack --mode development",

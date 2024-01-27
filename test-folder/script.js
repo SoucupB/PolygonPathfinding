@@ -13,4 +13,7 @@ polygon.triangulate(); // This will triangulate the polygon (effectivelly creati
 console.log(polygon)
 
 let searcher = new Search(polygon);
-console.log(searcher.getPointsPath(new Point(1, 1), new Point(2, 2)));
+let pointsPath = searcher.getPointsPath(new Point(1, 1), new Point(4, 2));
+for(let i = 0, c = pointsPath.length; i < c; i++) {
+  console.log(`Point (${pointsPath[i].y}, ${pointsPath[i].x})`);
+}

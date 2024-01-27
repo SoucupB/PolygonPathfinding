@@ -25,5 +25,5 @@ Now we need a searcher object
 polygon.triangulate(); // This will triangulate the polygon (effectivelly creating a navmesh).
 
 let searcher = new Search(polygon);
-searcher.getPointsPath(new Point(0, 1), new Point(0, 2)); // returns a list of points of type [new Point(y1, x1), new Point(y2, x2), ....] which will be the found path.
+searcher.getPointsPath(new Point(1, 1), new Point(3, 2)); // returns a list of points of type [new Point(y1, x1), new Point(y2, x2), ....] which will be the found path.
 ```

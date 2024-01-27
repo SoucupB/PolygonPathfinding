@@ -1,0 +1,23 @@
+{
+  "name": "polygon-pathfinding",
+  "version": "1.0.0",
+  "description": "A pathfinding algorithm for 2d polygons",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SoucupB/PolygonPathfinding.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoucupB/PolygonPathfinding/issues"
+  },
+  "dependencies": {
+    "earcut": "^2.2.4"
+  },
+  "homepage": "https://github.com/SoucupB/PolygonPathfinding#readme"
+}

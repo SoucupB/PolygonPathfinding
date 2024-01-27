@@ -10,19 +10,16 @@ class Triangle {
     this.neighbours = [];
   }
 
+  calculateTriangleArea(a, b, c) {
+    return Math.abs((a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)) / 2);
+  }
+
   isPointInside(point) {
-    const [x, y] = [point.x, point.y];
-    const [x1, y1] = [this.a.x, this.a.y];
-    const [x2, y2] = [this.b.x, this.b.y];
-    const [x3, y3] = [this.c.x, this.c.y];
-
-    const denominator = (y2 - y3) * (x1 - x3) + (x3 - x2) * (y1 - y3);
-
-    const alpha = ((y2 - y3) * (x - x3) + (x3 - x2) * (y - y3)) / denominator;
-    const beta = ((y3 - y1) * (x - x3) + (x1 - x3) * (y - y3)) / denominator;
-    const gamma = 1 - alpha - beta;
-
-    return alpha > 0 && beta > 0 && gamma > 0;
+    const totalArea = this.calculateTriangleArea(this.a, this.b, this.c);
+    const area1 = this.calculateTriangleArea(point, this.b, this.c);
+    const area2 = this.calculateTriangleArea(this.a, point, this.c);
+    const area3 = this.calculateTriangleArea(this.a, this.b, point);
+    return Math.abs(area1 + area2 + area3 - totalArea) < Number.EPSILON;
   }
 
   _display() {
@@ -41,6 +38,10 @@ class Triangle {
       return ;
     }
     this._display();
+  }
+
+  displayEdges() {
+    console.log(`(${this.a.y},${this.a.x}),(${this.b.y},${this.b.x}),(${this.c.y},${this.c.x}),(${this.a.y},${this.a.x})`)
   }
 
   displayNeighbours_t(trianglesChecked = {}) {

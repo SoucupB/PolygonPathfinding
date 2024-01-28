@@ -34,3 +34,4 @@ console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
 
 And the graphical representation of this path is this
 
+![image](https://github.com/SoucupB/PolygonPathfinding/assets/49458226/f7f83278-0361-4bcc-b5e5-06031e06d2f5)

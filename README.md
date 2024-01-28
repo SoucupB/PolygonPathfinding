@@ -43,7 +43,7 @@ And here is a simple path for it.
 
 ![image](https://github.com/SoucupB/BoringPathfinding/assets/49458226/3f51d903-f652-409c-af97-ad6d25749d47)
 
-# What it supports
+# Support and notes
 
 | Version | Navmesh Polygon Triangulation | Holes Support | Triangle Searching Complexity | Searching Algorithm | Searching Algorithm Complexity | Point push in polygon complexity |
 | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- |

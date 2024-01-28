@@ -48,3 +48,7 @@ And here is a simple path for it. The path are the lines with yellow.
 | Version | Navmesh Polygon Triangulation | Holes Support | Triangle Searching Complexity | Searching Algorithm | Searching Algorithm Complexity | Point push in polygon complexity |
 | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- |
 | 0.1.0           |    ✔️   | ❌   | O(n) (where n is the number of triangles) | AStar | O(m ^ 2) (where m is the number of triangles in a path found) | O(n ^ 2) (where n is the number of points in the polygon) (O(n) in case of using woChecker=true) |
+
+# Contribution
+If you're intrested in upgrading this package with better performing algorithms, adding new features or solving bugs, do not hesitate
+to create issues and then, making pull request for them.

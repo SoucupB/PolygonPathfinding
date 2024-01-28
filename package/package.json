@@ -1,19 +1,20 @@
 {
   "name": "polygon-pathfinding",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A pathfinding algorithm for 2d polygons",
   "main": "bundle.js",
-  "scripts": {
-    "test": "npx tap",
-    "build": "webpack --mode development",
-    "start": "webpack serve --mode development"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SoucupB/PolygonPathfinding.git"
   },
-  "author": "",
+  "author": "Bogdan S",
   "license": "ISC",
+  "keywords": [
+    "pathfinding",
+    "polygon",
+    "search",
+    "astar"
+  ],
   "bugs": {
     "url": "https://github.com/SoucupB/PolygonPathfinding/issues"
   },

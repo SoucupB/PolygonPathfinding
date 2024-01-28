@@ -15,4 +15,4 @@ polygon.triangulate();
 let searcher = new Search(polygon);
 
 
-console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
+console.log(searcher.searchForPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))

@@ -87,7 +87,7 @@ class Search {
     return pathPoints;
   }
 
-  getPointsPath(src, dst) {
+  searchForPath(src, dst) {
     const triangleSrc = this.polygon.getTriangle(src);
     if(!triangleSrc) {
       return null;

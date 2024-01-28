@@ -27,7 +27,7 @@ polygon.triangulate();
 let searcher = new Search(polygon);
 
 // This will return a path of points that will represent a path between (0.3, 2.7) and (2.4, 4.5).
-console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
+console.log(searcher.searchForPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
 ```
 
 And the graphical representation of this path is this

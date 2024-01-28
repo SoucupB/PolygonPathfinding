@@ -1,4 +1,4 @@
-# BoringPathfinding
+# Polygon Pathfinding
 
 This document presents a simple algorithm for a pathfinding algorithm done for non-degenerate polygons.
 

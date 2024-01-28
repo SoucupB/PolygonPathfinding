@@ -51,7 +51,7 @@ class AStar {
         const neighbourID = this.uniqueID(neighbours[i]);
 
         if(!(neighbourID in visited)) {
-          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost + this.edgeHeuristics(currentNode.node, dst);
+          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost + this.edgeHeuristics(currentNode.node, dst); // to Solve
           if((neighbourID in costPerID) && costPerID[neighbourID] < currentCost) {
             continue;
           }

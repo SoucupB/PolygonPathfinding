@@ -1,6 +1,6 @@
 {
   "name": "polygon-pathfinding",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A pathfinding algorithm for 2d polygons",
   "main": "bundle.js",
   "scripts": {

@@ -113,7 +113,6 @@ class Funnel {
     else {
       pointsArray.push(hull[0].pointA);
     }
-    // Funnel.printFunnelPoints(pointsArray);
     let polygon = new Polygon();
     for(let i = 0, c = pointsArray.length; i < c; i++) {
       polygon.push(pointsArray[i].y, pointsArray[i].x)

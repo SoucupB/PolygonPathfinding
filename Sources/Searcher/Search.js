@@ -11,7 +11,12 @@ class Search {
     }
     this.aStar = new AStar((triA) => triA.neighbours, (triA) => {
       return triA.id;
-    }, (triA, triB) => triA.midDistance(triB), (triA, triB) => triA.midDistance(triB));
+    }, (triA, triB) => triA.midDistance(triB), (currentNode, nextNode, dst) => {
+      const midPoint_NextNode = nextNode.midPoint();
+      const midPoint_DstNode = dst.midPoint();
+      
+      return midPoint_NextNode.distancef(midPoint_DstNode);
+    });
   }
 
   search(src, dst) {
@@ -49,7 +54,12 @@ class Search {
     }, (bisector) => {
       return bisector.id;
     }, (bisectorA, bisectorB) => bisectorA.pointB.distancef(bisectorB.pointB),
-       (bisectorA, bisectorB) => bisectorA.pointB.distancef(bisectorB.pointB));
+       (bisectorA, bisectorNext, bisectorDst) => {
+          const pointNxt = bisectorNext.pointB;
+          const pointDst = bisectorDst.pointB;
+
+          return pointNxt.distancef(pointDst);
+       });
 
     return searchAlgo.search(src, dst);
   }

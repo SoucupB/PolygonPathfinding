@@ -7,7 +7,7 @@ class AStar {
     this.edgeCost = edgeCost;
     this.edgeHeuristics = edgeHeuristics;
     this.heap = new Heap((a, b) => {
-      return a.cost < b.cost;
+      return a.heuristics_cost < b.heuristics_cost;
     });
     this.cost = null;
   }
@@ -16,7 +16,8 @@ class AStar {
     this.heap.push({
       node: src,
       cost: 0,
-      parent: null
+      parent: null,
+      heuristics_cost: 0
     });
 
     return this.search_t(dst);
@@ -51,12 +52,13 @@ class AStar {
         const neighbourID = this.uniqueID(neighbours[i]);
 
         if(!(neighbourID in visited)) {
-          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost + this.edgeHeuristics(currentNode.node, dst); // to Solve
+          const currentCost = this.edgeCost(currentNode.node, neighbours[i]) + currentNode.cost;
           if((neighbourID in costPerID) && costPerID[neighbourID] < currentCost) {
             continue;
           }
 
           this.heap.push({
+            heuristics_cost: currentCost + this.edgeHeuristics(currentNode.node, neighbours[i], dst),
             cost: currentCost,
             node: neighbours[i],
             parent: currentNode

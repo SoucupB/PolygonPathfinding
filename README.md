@@ -39,7 +39,7 @@ And the graphical representation of this path is this
 ![image](https://github.com/SoucupB/BoringPathfinding/assets/49458226/4be0a686-b3ac-4679-8dc8-62dee7a4486f)
 
 Here is a simple example of a drawn polygon.
-And here is a simple path for it.
+And here is a simple path for it. The path are the lines with yellow.
 
 ![image](https://github.com/SoucupB/BoringPathfinding/assets/49458226/3f51d903-f652-409c-af97-ad6d25749d47)
 

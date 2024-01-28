@@ -11,19 +11,22 @@ And here is a simple path for it.
 # API
 In order to make a searcher we first need to declare a polygon.
 ```javascript
+const { Point, Polygon, Search } = require('polygon-pathfinding');
+
 let polygon = new Polygon();
 
-polygon.push(0, 0); // y, x
-polygon.push(0, 5);
-polygon.push(5, 5);
+polygon.push(0, 0);
 polygon.push(5, 0);
-polygon.closePolygon(); // Creates a line to the first point in order to close it.
-```
+polygon.push(5, 5);
+polygon.push(2, 5);
+polygon.push(2, 3);
+polygon.push(0, 3);
+polygon.closePolygon();
 
-Now we need a searcher object
-```javascript
-polygon.triangulate(); // This will triangulate the polygon (effectivelly creating a navmesh).
+polygon.triangulate();
 
 let searcher = new Search(polygon);
-searcher.getPointsPath(new Point(1, 1), new Point(3, 2)); // returns a list of points of type [new Point(y1, x1), new Point(y2, x2), ....] which will be the found path.
+
+// This will return a path of points that will represent a path between (0.3, 2.7) and (2.4, 4.5).
+console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
 ```

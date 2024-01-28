@@ -2,6 +2,11 @@
 
 This document presents a simple algorithm for a pathfinding algorithm done for non-degenerate polygons.
 
+# NPM Package
+```
+npm i polygon-pathfinding
+```
+
 # API
 In order to make a searcher we first need to declare a polygon.
 ```javascript

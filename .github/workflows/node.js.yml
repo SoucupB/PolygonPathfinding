@@ -19,6 +19,7 @@ jobs:
 
     steps:
     - name: Set working directory
+      run: ls
       working-directory: /home/runner/work/PolygonPathfinding/
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}

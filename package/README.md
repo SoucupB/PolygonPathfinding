@@ -30,12 +30,12 @@ let searcher = new Search(polygon);
 console.log(searcher.searchForPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))
 ```
 
-And the graphical representation of this path is this
-
+And the graphical representation of this simple polygon is.
 ![image](https://github.com/SoucupB/PolygonPathfinding/assets/49458226/f7f83278-0361-4bcc-b5e5-06031e06d2f5)
 
 
 # Testing
+You can test this pathfinding algorithm on this page: https://soucupb.github.io/BoringPathfinding/
 ![image](https://github.com/SoucupB/BoringPathfinding/assets/49458226/4be0a686-b3ac-4679-8dc8-62dee7a4486f)
 
 Here is a simple example of a drawn polygon.

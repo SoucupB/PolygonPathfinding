@@ -50,6 +50,6 @@ test('Check simple path in a square v3', (t) => {
   polygon.triangulate();
 
   let searcher = new Search(polygon);
-  t.notOk(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)) == null, 'Result should not be null');
+  t.equal(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)).length, 3, 'This path should contain 3 points');
   t.end();
 });

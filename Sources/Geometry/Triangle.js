@@ -10,16 +10,22 @@ class Triangle {
     this.neighbours = [];
   }
 
-  calculateTriangleArea(a, b, c) {
-    return Math.abs((a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)) / 2);
-  }
-
   isPointInside(point) {
-    const totalArea = this.calculateTriangleArea(this.a, this.b, this.c);
-    const area1 = this.calculateTriangleArea(point, this.b, this.c);
-    const area2 = this.calculateTriangleArea(this.a, point, this.c);
-    const area3 = this.calculateTriangleArea(this.a, this.b, point);
-    return Math.abs(area1 + area2 + area3 - totalArea) < Number.EPSILON;
+    const { x, y } = point;
+    const { a, b, c } = this;
+  
+    function sign(p1, p2, p3) {
+      return (p1.x - p3.x) * (p2.y - p3.y) - (p2.x - p3.x) * (p1.y - p3.y);
+    }
+  
+    const d1 = sign({ x, y }, a, b);
+    const d2 = sign({ x, y }, b, c);
+    const d3 = sign({ x, y }, c, a);
+  
+    const hasNeg = (d1 < 0) || (d2 < 0) || (d3 < 0);
+    const hasPos = (d1 > 0) || (d2 > 0) || (d3 > 0);
+  
+    return !(hasNeg && hasPos);
   }
 
   _display() {

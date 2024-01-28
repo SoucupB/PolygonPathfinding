@@ -11,5 +11,8 @@ polygon.push(0, 3);
 polygon.closePolygon();
 
 polygon.triangulate();
+
 let searcher = new Search(polygon);
+
+
 console.log(searcher.getPointsPath(new Point(0.3, 2.7), new Point(2.4, 4.5)))

@@ -86,7 +86,6 @@ class Search {
     if(!triangleDst) {
       return null;
     }
-
     return this.getPointsPathFromTriangle(triangleSrc, triangleDst, src, dst);
   }
 }

@@ -15,6 +15,12 @@ class Navmesh {
     }
   }
 
+  displayNavmesh() {
+    for(let i = 0, c = this.triangles.length; i < c; i++) {
+      this.triangles[i].displayEdges();
+    }
+  }
+
   createNeighbours() {
     let triangleCheck = {};
     if(!this.triangles.length) {

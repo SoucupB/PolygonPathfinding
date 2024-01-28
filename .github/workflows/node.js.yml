@@ -19,7 +19,8 @@ jobs:
         node-version: [20.11.0]
 
     steps:
-    - working-directory: /home/runner/work/PolygonPathfinding/Sources
+    - name: Set working directory
+      working-directory: /home/runner/work/PolygonPathfinding/Sources
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       run: cd Sources/

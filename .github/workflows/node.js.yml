@@ -29,5 +29,3 @@ jobs:
       run: |
         cd Sources/
         npm test
-    - name: Error code
-      run: echo $?

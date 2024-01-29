@@ -3,7 +3,6 @@ const { test } = tap;
 import Funnel from '../Searcher/Funnel.js';
 import Triangle from '../Geometry/Triangle.js';
 import Point from '../Geometry/Point.js';
-import Polygon from '../Geometry/Polygon.js';
 import Search from '../Searcher/Search.js';
 
 test('Check funnel creation', (t) => {

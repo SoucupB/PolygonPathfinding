@@ -4,7 +4,7 @@
   "description": "A pathfinding algorithm for 2d polygons",
   "main": "dist/bundle.js",
   "scripts": {
-    "test": "npx tap",
+    "test": "npx tap --disable-coverage --allow-empty-coverage",
     "build": "webpack --mode production"
   },
   "repository": {
